@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test</title>
+</head>
+
+<body>
+  <p id="test"></p>
+  <button onclick="document.getElementById('test').innerHTML=onClickEvent()">click Me</button>
+    <script>
+    /*let p= "Where Is Everyone Hiding ?"
+      document.getElementById("test").innerHTML=p;
+      document.getElementById("test").style.backgroundColor="red";
+  */
+ const onClickEvent=()=>{
+    return "Click Triggerd"
+  }
+    const object = {
+      fn: "Kazuha",
+      ln: "3411",
+      age: 50,
+      newobj: {
+        id: 855351,
+        adress: "fgkjhk",
+      },
+      fullnname:() =>{
+        return object.fn + " " + object.ln;
+      }
+    };
+    object.ln = "lmao"
+    //document.getElementById("test").innerHTML = object;
+    //document.getElementById("test").innerHTML = JSON.stringify(object);
+    //document.getElementById("test").innerHTML = JSON.stringify(object.fn + " " + object.ln +" " + object.newobj.adress);
+    //document.getElementById("test").innerHTML = JSON.stringify(object.newobj.adress);
+    //document.getElementById("test").innerHTML = JSON.stringify(object);
+    //Normal Function
+    /*function sum(a,b){
+      return a+b;
+    }
+    let result=sum(4,5);
+    document.getElementById("test").innerHTML = result;
+    */
+    /*ArrOW fUNCTION
+     const x=() => {
+       return "Hello From Arrow Function"
+     }  
+     document.getElementById("test").innerHTML=x();
+   */
+    //Anoynomous Function
+    
+    //type of check
+    const copyObj={...object,fn: object.fullnname()}
+    console.log(copyObj)
+    function sum(a, b) {
+      if (typeof (a) == "number" && typeof (b) == "number") {
+
+        return a + b;
+      } else {
+        return "Please input number as value"
+      }
+    }
+  //document.getElementById("test").innerHTML = sum();
+
+  </script>
+</body>
+
+</html>
