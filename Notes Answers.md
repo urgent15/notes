@@ -1,8 +1,8 @@
 
-### 1. **`let` vs `var`**
+### 1. **`let` vs `var`** vs `const`
    - **`let`**: A keyword in JavaScript used to declare a block-scoped variable, meaning the variable is only accessible within the block it's defined in (e.g., within a function, loop, or conditional statement).
    - **`var`**: A keyword in JavaScript used to declare a function-scoped or globally-scoped variable. It does not adhere to block scope, meaning it can be accessed outside the block where it’s defined, leading to potential issues.
-
+- `const` :In JavaScript, const is a keyword used to declare variables that are block-scoped, similar to variables declared using let, but with an important difference: variables declared with const cannot be reassigned. However, it is essential to note that const does not make the variable itself immutable, but rather the binding of the variable. This means that if a const variable holds an object or an array, the contents of that object or array can be modified.
 ### 2. **Asynchronous vs Synchronous**
    - **Synchronous**: Code is executed line by line, and each operation must complete before the next one begins. This can lead to blocking, where a task can hold up others until it's finished.
    - **Asynchronous**: Operations are executed independently of the main program flow, allowing other tasks to continue while waiting for one to complete. This is common in tasks like API calls, where you don't want to wait for a response before moving on.
